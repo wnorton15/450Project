@@ -16,5 +16,20 @@ namespace Cita450Project
         {
             InitializeComponent();
         }
+
+        private void EnterBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
