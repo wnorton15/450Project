@@ -12,6 +12,7 @@ namespace Cita450Project
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,27 @@ namespace Cita450Project
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PasswordChk_CheckedChanged(object sender, EventArgs e)
+        {
+            //grab text box property password char
+            char passwordChar = passwordTxtBox.PasswordChar;
+            //convert "*" to char 
+            string str = "*";
+            char character = char.Parse(str);
+            //compare passwordChar to character
+            if (passwordChar == character)
+            {
+                //if yes, change to ""
+                passwordTxtBox.PasswordChar = '\u0000';
+            }
+
+            else
+            {
+                //else remain "*"
+                passwordTxtBox.PasswordChar = character;
+            }
         }
     }
 }
