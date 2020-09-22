@@ -48,28 +48,17 @@
             // 
             // fNameTxt
             // 
-<<<<<<< HEAD
-            this.textBox1.Location = new System.Drawing.Point(302, 209);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 26);
-            this.textBox1.TabIndex = 1;
-=======
+
             this.fNameTxt.Location = new System.Drawing.Point(126, 146);
             this.fNameTxt.Name = "fNameTxt";
             this.fNameTxt.Size = new System.Drawing.Size(100, 20);
             this.fNameTxt.TabIndex = 1;
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(172, 214);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
+
             this.label1.Location = new System.Drawing.Point(40, 149);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 2;
@@ -77,13 +66,7 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(172, 254);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.label2.Location = new System.Drawing.Point(40, 175);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 3;
@@ -91,28 +74,15 @@
             // 
             // lNameTxt
             // 
-<<<<<<< HEAD
-            this.textBox2.Location = new System.Drawing.Point(302, 249);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 26);
-            this.textBox2.TabIndex = 4;
-=======
             this.lNameTxt.Location = new System.Drawing.Point(126, 172);
             this.lNameTxt.Name = "lNameTxt";
             this.lNameTxt.Size = new System.Drawing.Size(100, 20);
             this.lNameTxt.TabIndex = 4;
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< HEAD
-            this.label3.Location = new System.Drawing.Point(176, 146);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.label3.Location = new System.Drawing.Point(61, 106);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 20);
             this.label3.TabIndex = 5;
@@ -120,12 +90,7 @@
             // 
             // EnterBtn
             // 
-<<<<<<< HEAD
-            this.EnterBtn.Location = new System.Drawing.Point(180, 382);
-            this.EnterBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-=======
             this.EnterBtn.Location = new System.Drawing.Point(14, 326);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.EnterBtn.Name = "EnterBtn";
             this.EnterBtn.Size = new System.Drawing.Size(112, 35);
             this.EnterBtn.TabIndex = 6;
@@ -133,26 +98,10 @@
             this.EnterBtn.UseVisualStyleBackColor = true;
             this.EnterBtn.Click += new System.EventHandler(this.EnterBtn_Click);
             // 
-<<<<<<< HEAD
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(152, 322);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(318, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "An ID number will be automatically assigned";
-            // 
-            // ClearBtn
-            // 
-            this.ClearBtn.Location = new System.Drawing.Point(324, 382);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-=======
+
             // ClearBtn
             // 
             this.ClearBtn.Location = new System.Drawing.Point(95, 326);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(112, 35);
             this.ClearBtn.TabIndex = 8;
@@ -162,16 +111,6 @@
             // 
             // CancelBtn
             // 
-<<<<<<< HEAD
-            this.BackBtn.Location = new System.Drawing.Point(542, 18);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(64, 35);
-            this.BackBtn.TabIndex = 10;
-            this.BackBtn.Text = "back";
-            this.BackBtn.UseVisualStyleBackColor = true;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
-=======
             this.CancelBtn.Location = new System.Drawing.Point(176, 326);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
@@ -179,22 +118,14 @@
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-<<<<<<< HEAD
-            this.label5.Location = new System.Drawing.Point(222, 74);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 20);
-=======
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 20);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.label5.TabIndex = 11;
             this.label5.Text = "Add User Info Page";
             // 
@@ -262,9 +193,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(624, 502);
-=======
             this.ClientSize = new System.Drawing.Size(349, 361);
             this.Controls.Add(this.PasswordChk);
             this.Controls.Add(this.userNameTxt);
@@ -273,7 +201,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.emailTxt);
             this.Controls.Add(this.label6);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.ClearBtn);
@@ -282,12 +209,7 @@
             this.Controls.Add(this.lNameTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-<<<<<<< HEAD
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-=======
             this.Controls.Add(this.fNameTxt);
->>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
