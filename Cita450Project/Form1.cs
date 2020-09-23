@@ -14,16 +14,6 @@ namespace Cita450Project
     public partial class Form1 : Form
     {
 
-        
-        SqlConnection cnn;
-        string connectionString = @"Data Source=Cita450.Project.Pankow;
-            Initial Catalog=Users;
-            integrated security info=False;
-                persist security info=False;
-                Trusted_Connection=Yes";
-        cnn = new SqlConnection(connectionString);
-
-
         public Form1()
         {
             InitializeComponent();
@@ -39,7 +29,6 @@ namespace Cita450Project
             string password = passwordTxtBox.ToString();
 
             //validate the entered data
-
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -75,7 +64,8 @@ namespace Cita450Project
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
