@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -13,16 +14,6 @@ namespace Cita450Project
 {
     public partial class Form1 : Form
     {
-
-        
-        SqlConnection cnn;
-        string connectionString = @"Data Source=Cita450.Project.Pankow;
-            Initial Catalog=Users;
-            integrated security info=False;
-                persist security info=False;
-                Trusted_Connection=Yes";
-        cnn = new SqlConnection(connectionString);
-
 
         public Form1()
         {
@@ -40,6 +31,25 @@ namespace Cita450Project
 
             //validate the entered data
 
+            //Connect to database to enter data
+            string connectionString;
+            SqlConnection cnn;
+            connectionString = @"Data Source=Cita450.Project.Pankow;
+            Initial Catalog=Users;
+            integrated security info=False;
+                persist security info=False;
+                Trusted_Connection=Yes";
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Customer", cnn);
+
+            //display users entered
+            DataSet dataSet = new DataSet();
+            sqlDataAdapter.Fill(dataSet, "Employees");
+            DataGrid1.DataSource = dataSet.Tables["Employees"].DefaultView;
+            DataGrid1.Show();
+            MessageBox.Show("Connection Open!");
+            cnn.Close();
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)

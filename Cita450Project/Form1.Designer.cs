@@ -45,7 +45,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PasswordChk = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DataGrid1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // fNameTxt
@@ -131,7 +133,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(132, 21);
+            this.label5.Location = new System.Drawing.Point(180, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 20);
@@ -225,11 +227,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New User Info";
             // 
+            // DataGrid1
+            // 
+            this.DataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid1.Location = new System.Drawing.Point(254, 92);
+            this.DataGrid1.Name = "DataGrid1";
+            this.DataGrid1.Size = new System.Drawing.Size(237, 159);
+            this.DataGrid1.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 305);
+            this.ClientSize = new System.Drawing.Size(513, 305);
+            this.Controls.Add(this.DataGrid1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CancelBtn);
@@ -241,6 +252,7 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +276,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox PasswordChk;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView DataGrid1;
     }
 }
 

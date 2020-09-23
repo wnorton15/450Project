@@ -22,3 +22,4 @@ G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.csproj.Cor
 G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.exe
 G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.pdb
 >>>>>>> 0ce789c2b7f62470adb08366ef01691edd889506
+G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.AddCustomer.resources
