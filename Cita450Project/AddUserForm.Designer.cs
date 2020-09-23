@@ -45,15 +45,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PasswordChk = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DataGrid1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // fNameTxt
             // 
             this.fNameTxt.Location = new System.Drawing.Point(81, 22);
-            this.fNameTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fNameTxt.Margin = new System.Windows.Forms.Padding(2);
             this.fNameTxt.Name = "fNameTxt";
             this.fNameTxt.Size = new System.Drawing.Size(111, 20);
             this.fNameTxt.TabIndex = 1;
@@ -80,7 +78,7 @@
             // lNameTxt
             // 
             this.lNameTxt.Location = new System.Drawing.Point(81, 46);
-            this.lNameTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lNameTxt.Margin = new System.Windows.Forms.Padding(2);
             this.lNameTxt.Name = "lNameTxt";
             this.lNameTxt.Size = new System.Drawing.Size(111, 20);
             this.lNameTxt.TabIndex = 2;
@@ -98,7 +96,7 @@
             // EnterBtn
             // 
             this.EnterBtn.Location = new System.Drawing.Point(5, 271);
-            this.EnterBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.EnterBtn.Name = "EnterBtn";
             this.EnterBtn.Size = new System.Drawing.Size(75, 23);
             this.EnterBtn.TabIndex = 7;
@@ -109,7 +107,7 @@
             // ClearBtn
             // 
             this.ClearBtn.Location = new System.Drawing.Point(84, 271);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.ClearBtn.TabIndex = 8;
@@ -120,7 +118,7 @@
             // CancelBtn
             // 
             this.CancelBtn.Location = new System.Drawing.Point(163, 271);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.CancelBtn.TabIndex = 9;
@@ -133,7 +131,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(180, 21);
+            this.label5.Location = new System.Drawing.Point(130, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 20);
@@ -143,7 +141,7 @@
             // emailTxt
             // 
             this.emailTxt.Location = new System.Drawing.Point(81, 94);
-            this.emailTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTxt.Margin = new System.Windows.Forms.Padding(2);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(111, 20);
             this.emailTxt.TabIndex = 4;
@@ -161,7 +159,7 @@
             // passwordTxtBox
             // 
             this.passwordTxtBox.Location = new System.Drawing.Point(81, 118);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '*';
             this.passwordTxtBox.Size = new System.Drawing.Size(111, 20);
@@ -180,7 +178,7 @@
             // userNameTxt
             // 
             this.userNameTxt.Location = new System.Drawing.Point(81, 70);
-            this.userNameTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userNameTxt.Margin = new System.Windows.Forms.Padding(2);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(111, 20);
             this.userNameTxt.TabIndex = 3;
@@ -199,7 +197,7 @@
             // 
             this.PasswordChk.AutoSize = true;
             this.PasswordChk.Location = new System.Drawing.Point(81, 142);
-            this.PasswordChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordChk.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordChk.Name = "PasswordChk";
             this.PasswordChk.Size = new System.Drawing.Size(102, 17);
             this.PasswordChk.TabIndex = 6;
@@ -227,32 +225,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New User Info";
             // 
-            // DataGrid1
-            // 
-            this.DataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid1.Location = new System.Drawing.Point(254, 92);
-            this.DataGrid1.Name = "DataGrid1";
-            this.DataGrid1.Size = new System.Drawing.Size(237, 159);
-            this.DataGrid1.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 305);
-            this.Controls.Add(this.DataGrid1);
+            this.ClientSize = new System.Drawing.Size(406, 305);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.EnterBtn);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +264,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox PasswordChk;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView DataGrid1;
     }
 }
 
