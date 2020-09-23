@@ -34,20 +34,13 @@ namespace Cita450Project
             //Connect to database to enter data
             string connectionString;
             SqlConnection cnn;
-            connectionString = @"Data Source=Cita450.Project.Pankow;
-            Initial Catalog=Users;
-            integrated security info=False;
+            connectionString = @"Data Source=Owner-PC;
+            Initial Catalog=IceDB;
+            integrated security=False;
                 persist security info=False;
                 Trusted_Connection=Yes";
             cnn = new SqlConnection(connectionString);
             cnn.Open();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Customer", cnn);
-
-            //display users entered
-            DataSet dataSet = new DataSet();
-            sqlDataAdapter.Fill(dataSet, "Employees");
-            DataGrid1.DataSource = dataSet.Tables["Employees"].DefaultView;
-            DataGrid1.Show();
             MessageBox.Show("Connection Open!");
             cnn.Close();
         }
