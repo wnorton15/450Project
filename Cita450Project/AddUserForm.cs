@@ -23,25 +23,51 @@ namespace Cita450Project
         private void EnterBtn_Click(object sender, EventArgs e)
         {
             //Pull and save the entered data
-            string fName = fNameTxt.ToString();
-            string lName = lNameTxt.ToString();
-            string userN = userNameTxt.ToString();
-            string email = emailTxt.ToString();
-            string password = passwordTxtBox.ToString();
+            string fName = fNameTxt.Text.Trim();
+            string lName = lNameTxt.Text.Trim();
+            string userN = userNameTxt.Text.Trim();
+            string email = emailTxt.Text.Trim();
+            string password = passwordTxtBox.Text.Trim();
 
             //validate the entered data
 
             //Connect to database to enter data
             string connectionString;
+            
             SqlConnection cnn;
+
             connectionString = @"Data Source=Owner-PC;
             Initial Catalog=IceDB;
             integrated security=False;
                 persist security info=False;
                 Trusted_Connection=Yes";
             cnn = new SqlConnection(connectionString);
+
+            //create query to enter into database
+            string query = "INSERT INTO Users " +
+                            "(LastName, FirstName, Username, UserPassword, Email) " +
+                            "VALUES (@LastName,  @FirstName, @Username, @UserPassword, @Email) ";
+            
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            
+            //replace the @values with the one
+            
+            cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 255).Value = lName;
+            
+            cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 255).Value = fName;
+            
+            cmd.Parameters.Add("@Username", SqlDbType.VarChar, 255).Value = userN;
+            
+            cmd.Parameters.Add("@UserPassword", SqlDbType.VarChar, 255).Value = password;
+            
+            cmd.Parameters.Add("@Email", SqlDbType.VarChar, 255).Value = email;
+            
             cnn.Open();
-            MessageBox.Show("Connection Open!");
+            
+            cmd.ExecuteNonQuery();
+            
+            MessageBox.Show("User was Added!");
+            
             cnn.Close();
         }
 
@@ -79,11 +105,6 @@ namespace Cita450Project
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void BackBtn_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
