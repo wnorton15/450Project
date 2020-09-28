@@ -31,9 +31,11 @@ namespace Cita450Project
                 string userN = userNameTxt.Text.Trim();
                 string email = emailTxt.Text.Trim();
                 string password = passwordTxtBox.Text.Trim();
-                int passNum = password.Count(char.IsLetter);
-                int userNum = userN.Count(char.IsLetter);
-
+                int passNum = password.Length;
+                int userNum = userN.Length;
+                //checks if a number is present in fName or lName fields
+                bool isDigitPresentFName =fName.Any(c => char.IsDigit(c));
+                bool isDigitPresentLName =lName.Any(c => char.IsDigit(c));
                 //Connect to database to enter data
                 string connectionString;
 
@@ -43,30 +45,41 @@ namespace Cita450Project
                 //validate if all fields are filled
                 if (fName == "" || lName == "" || userN == "" || email == "" || password == "")
                 {
-                    MessageBox.Show("Please check if all values are filled");
+                    MessageBox.Show("Error: All values must be filled");
                 }
-                //validate that names have no numbers
 
                 //having trouble getting this working
-                else if (Regex.IsMatch(fName, @"^\d+$") || Regex.IsMatch(lName, @"^\d+$"))
+                else if (isDigitPresentFName == true || isDigitPresentLName == true)
                 {
-                    MessageBox.Show("Please check if first or last name have no numbers");
+                    MessageBox.Show("Error: The first or last name fields cannot contain numbers");
                 }
-                //validate if the password is between 4 and 15 characters
-                else if(userNum > 10 || userNum < 4)
+
+                //*having trouble getting this working
+                //validates if the user contains any spaces
+                else if (userN.Contains(" ") || password.Contains(" ") || fName.Contains(" ") || lName.Contains(" "))
                 {
-                    MessageBox.Show("Please check if Username is " +
+                    MessageBox.Show("Error: There can be no spaces" +
+                        " in the username or password field");
+                }
+
+                //validate if the Username is between 4 and 15 characters
+                else if(userNum > 15 || userNum < 4)
+                {
+                    MessageBox.Show("Error: User name must be between 4 and 15 characters");
+                }
+
+                //validate if the password is between 4 and 15 characters
+                else if (userNum > 15 || userNum < 4)
+                {
+                    MessageBox.Show("Error: The password must be " +
                         "between 4 and 15 characters long");
                 }
-                else if(passNum > 15 || passNum < 3)
-                {
-                    MessageBox.Show("Please check if Password is " +
-                        "between 3 and 10 characters long");
-                }
+
                 //validate if email ends in ".com"
-                else if(email.EndsWith(".com"))
+                else if(email.EndsWith(".com") || email.EndsWith(".edu"))
                 {
-                    connectionString = @"Data Source=MAC18552;
+                    //Change "Data Source" field to system name
+                    connectionString = @"Data Source=OWNER-PC;
                 Initial Catalog=IceDB;
                 integrated security=False;
                 persist security info=False;
@@ -96,7 +109,7 @@ namespace Cita450Project
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("User was successfully added!");
+                    MessageBox.Show(fName + " was successfully added!");
 
                     cnn.Close();
 
