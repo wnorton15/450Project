@@ -1,5 +1,6 @@
 
 USE IceDB;
+/*
 CREATE TABLE Users (
     UserID int IDENTITY(1,1) PRIMARY KEY,
     LastName varchar(255),
@@ -8,3 +9,6 @@ CREATE TABLE Users (
     UserPassword varchar(255),
 	Email varchar(255)
 );
+*/
+
+select * from Users
