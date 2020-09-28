@@ -36,6 +36,8 @@
             this.CustomerPriceInput = new System.Windows.Forms.TextBox();
             this.CustomerAddressInput = new System.Windows.Forms.TextBox();
             this.SubmitCustomer = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -93,23 +95,45 @@
             this.CustomerAddressInput.Location = new System.Drawing.Point(255, 160);
             this.CustomerAddressInput.Name = "CustomerAddressInput";
             this.CustomerAddressInput.Size = new System.Drawing.Size(245, 26);
-            this.CustomerAddressInput.TabIndex = 7;
+            this.CustomerAddressInput.TabIndex = 5;
             // 
             // SubmitCustomer
             // 
-            this.SubmitCustomer.Location = new System.Drawing.Point(63, 296);
+            this.SubmitCustomer.Location = new System.Drawing.Point(12, 402);
             this.SubmitCustomer.Name = "SubmitCustomer";
-            this.SubmitCustomer.Size = new System.Drawing.Size(113, 47);
-            this.SubmitCustomer.TabIndex = 8;
+            this.SubmitCustomer.Size = new System.Drawing.Size(113, 36);
+            this.SubmitCustomer.TabIndex = 7;
             this.SubmitCustomer.Text = "Submit";
             this.SubmitCustomer.UseVisualStyleBackColor = true;
             this.SubmitCustomer.Click += new System.EventHandler(this.SubmitCustomer_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(131, 402);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(113, 36);
+            this.ClearButton.TabIndex = 8;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(250, 402);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(113, 36);
+            this.CancelButton.TabIndex = 9;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SubmitCustomer);
             this.Controls.Add(this.CustomerAddressInput);
             this.Controls.Add(this.CustomerPriceInput);
@@ -135,5 +159,7 @@
         private System.Windows.Forms.TextBox CustomerPriceInput;
         private System.Windows.Forms.TextBox CustomerAddressInput;
         private System.Windows.Forms.Button SubmitCustomer;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }

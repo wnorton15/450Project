@@ -53,12 +53,12 @@ namespace Cita450Project
                     MessageBox.Show("Please check if first or last name have no numbers");
                 }
                 //validate if the password is between 4 and 15 characters
-                else if(userNum > 10 || userNum < 3)
+                else if(userNum > 10 || userNum < 4)
                 {
                     MessageBox.Show("Please check if Username is " +
                         "between 4 and 15 characters long");
                 }
-                else if(passNum > 15 || passNum < 4)
+                else if(passNum > 15 || passNum < 3)
                 {
                     MessageBox.Show("Please check if Password is " +
                         "between 3 and 10 characters long");
@@ -66,7 +66,7 @@ namespace Cita450Project
                 //validate if email ends in ".com"
                 else if(email.EndsWith(".com"))
                 {
-                    connectionString = @"Data Source=Owner-PC;
+                    connectionString = @"Data Source=MAC18552;
                 Initial Catalog=IceDB;
                 integrated security=False;
                 persist security info=False;
