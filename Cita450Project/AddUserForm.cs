@@ -79,7 +79,7 @@ namespace Cita450Project
                 else if(email.EndsWith(".com") || email.EndsWith(".edu"))
                 {
                     //Change "Data Source" field to system name
-                    connectionString = @"Data Source=OWNER-PC;
+                    connectionString = @"Data Source=MAC18552;
                 Initial Catalog=IceDB;
                 integrated security=False;
                 persist security info=False;

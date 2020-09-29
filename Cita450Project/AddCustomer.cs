@@ -21,7 +21,10 @@ namespace Cita450Project
         private void SubmitCustomer_Click(object sender, EventArgs e)
         {
             String customerName;
-            String customerAddress;
+            int streetNumber;
+            String streetName;
+            String city;
+            int zipCode;
             float customerPrice;
             bool CustomerAddressExists;
             String query;
@@ -38,17 +41,33 @@ namespace Cita450Project
                 MessageBox.Show("Please enter a customer name");
                 return;
             }
-            if (CustomerAddressInput.Text.Trim().Equals(""))
+            if (StreetNumberInput.Text.Trim().Equals(""))
             {
                 CustomerAddressExists = false;
+                streetNumber = 0;
+                streetName = "";
+                city = "";
+                zipCode = 0;
             }
             else
             {
                 CustomerAddressExists = true;
+                try
+                {
+                    streetNumber = int.Parse(StreetNumberInput.Text.Trim());
+                    zipCode = int.Parse(ZipCodeInput.Text.Trim());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please enter a number for street number and zip code");
+                    return;
+                }
+                streetName = StreetNameInput.Text.Trim();
+                city = CityInput.Text.Trim();
             }
+            
 
             customerName = CustomerNameInput.Text.Trim();
-            customerAddress = CustomerAddressInput.Text.Trim();
 
             try
             {
@@ -68,9 +87,10 @@ namespace Cita450Project
 
             if (CustomerAddressExists)
             {
-                query = "INSERT INTO Customers (CustomerName, CustomerAddress, Price) " +
-                                    "VALUES ('" + customerName +"', '" + customerAddress + 
-                                    "', " + customerPrice.ToString() + ")";
+                query = "INSERT INTO Customers (CustomerName, StreetNumber, StreetName, City, ZipCode, Price) " +
+                                    "VALUES ('" + customerName +"', " + streetNumber.ToString() + ", '" +  
+                                    streetName + "', '" + city + "', " + zipCode.ToString() +
+                                    ", " + customerPrice.ToString() + ")";
             }
             else
             {
@@ -100,7 +120,10 @@ namespace Cita450Project
 
         private void Clear()
         {
-            CustomerAddressInput.Text = "";
+            StreetNumberInput.Text = "";
+            StreetNameInput.Text = "";
+            CityInput.Text = "";
+            ZipCodeInput.Text = "";
             CustomerNameInput.Text = "";
             CustomerPriceInput.Text = "";
         }
