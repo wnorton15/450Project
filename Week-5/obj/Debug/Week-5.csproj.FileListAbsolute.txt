@@ -1,0 +1,10 @@
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\bin\Debug\Week-5.exe.config
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\bin\Debug\Week-5.exe
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\bin\Debug\Week-5.pdb
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week-5.csprojAssemblyReference.cache
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week_5.Form1.resources
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week_5.Properties.Resources.resources
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week-5.csproj.GenerateResource.cache
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week-5.exe
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week-5.pdb
+C:\WorkSpace\Classes\Fall2020\CITA210-01\C#-LN01\Week-5\obj\Debug\Week_5.AddCustomer.resources
