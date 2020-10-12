@@ -58,46 +58,40 @@ namespace Cita450Project
             }
             try
             {
-
-                //Connect to database to enter data
                 string connectionString;
-
-                SqlCommand myCommand = default(SqlCommand);
 
                 SqlConnection cnn;
 
+                //create connection string to connect to database
                 //Change "Data Source" field to system name
-                connectionString = @"Data Source=MAC18552;
+                connectionString = @"Data Source=OWNER-PC;
                 Initial Catalog=IceDB;
                 integrated security=False;
                 persist security info=False;
                 Trusted_Connection=Yes";
-                cnn = new SqlConnection(connectionString);
 
                 //create query to enter into database
                 //ask database if entered username and password exist
-                string query = "SELECT Username,Password " +
-                                "From Users WHERE" +
-                                "Username = @Username AND" +
-                                "Password = @Password";
+                string query = "SELECT Username,UserPassword " +
+                                "From Users WHERE " +
+                                "Username = @Username AND " +
+                                "UserPassword = @Password";
 
-                //Create new SQL parameter
-                SqlParameter uName = new SqlParameter("@Username", SqlDbType.VarChar);
-                SqlParameter uPassword = new SqlParameter("@Password", SqlDbType.VarChar);
-
-                //take user entered data
-                uName.Value = usernameTxtBox.Text;
-                uPassword.Value = passwordTxtBox.Text;
-
-                //replace @Username,@Password in query with User entered data
-                myCommand.Parameters.Add(uName);
-                myCommand.Parameters.Add(uPassword);
-
+                cnn = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, cnn);
 
-                cnn.Open();
+                //take user entered data
+                string uName = usernameTxtBox.Text.Trim();
+                string uPassword = passwordTxtBox.Text.Trim();
 
-                SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                //replace the @Username & @Password with user inputs
+                cmd.Parameters.Add("@Username", SqlDbType.VarChar, 255).Value = uName;
+                cmd.Parameters.Add("@Password", SqlDbType.VarChar, 255).Value = uPassword;
+
+                //open connection
+                cmd.Connection.Open();
+
+                SqlDataReader myReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
                 if (myReader.Read() == true)
                 {
@@ -105,11 +99,9 @@ namespace Cita450Project
                     //Take user to main menu
                     Clearfields();
                 }
-
                 else
                 {
                     MessageBox.Show("Login Error!!!", "Please check Username and Password!");
-                    Clearfields();
                 }
                 if(cnn.State == ConnectionState.Open)
                 {
@@ -140,6 +132,7 @@ namespace Cita450Project
         {
             Form1 addUser = new Form1();
             addUser.Show();
+            this.Close();
         }
     }
 }
