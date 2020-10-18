@@ -95,14 +95,22 @@ namespace Cita450Project
 
                 if (myReader.Read() == true)
                 {
-                    MessageBox.Show("Login Successful, Welcome " + usernameTxtBox.Text);
+                    MessageBox.Show("Login Successful, Welcome!");
                     //Take user to main menu
                     Clearfields();
+                    this.Hide();
+                    var mainMenu = new MainMenu();
+                    mainMenu.Closed += (s, args) => this.Close();
+                    mainMenu.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Login Error!!!", "Please check Username and Password!");
+                    MessageBox.Show("Login Error!!!", 
+                        "Please check Username and Password!",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
                 }
+
                 if(cnn.State == ConnectionState.Open)
                 {
                     cnn.Close();

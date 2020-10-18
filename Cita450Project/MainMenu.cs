@@ -39,5 +39,13 @@ namespace Cita450Project
             Login login = new Login();
             login.Show();
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
+        }
     }
 }
