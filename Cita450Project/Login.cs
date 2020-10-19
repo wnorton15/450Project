@@ -46,13 +46,19 @@ namespace Cita450Project
         {
             if (usernameTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter username", "Error");
+                MessageBox.Show("Login Error!!!",
+                    "Please check Username and Password!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                 usernameTxtBox.Focus();
                 return;
             }
             if (passwordTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter password", "Error");
+                MessageBox.Show("Login Error!!!",
+                    "Please check Username and Password!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                 passwordTxtBox.Focus();
                 return;
             }
@@ -140,6 +146,11 @@ namespace Cita450Project
         {
             Form1 addUser = new Form1();
             addUser.Show();
+            this.Close();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

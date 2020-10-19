@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.updateUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             // selectOperationToolStripMenuItem
             // 
             this.selectOperationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addUserToolStripMenuItem});
+            this.addUserToolStripMenuItem,
+            this.updateUserInfoToolStripMenuItem});
             this.selectOperationToolStripMenuItem.Name = "selectOperationToolStripMenuItem";
             this.selectOperationToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.selectOperationToolStripMenuItem.Text = "Admin Operations";
@@ -67,7 +69,7 @@
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
@@ -156,6 +158,13 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // updateUserInfoToolStripMenuItem
+            // 
+            this.updateUserInfoToolStripMenuItem.Name = "updateUserInfoToolStripMenuItem";
+            this.updateUserInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateUserInfoToolStripMenuItem.Text = "Update User Info";
+            this.updateUserInfoToolStripMenuItem.Click += new System.EventHandler(this.updateUserInfoToolStripMenuItem_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,5 +200,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutAppToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.ToolStripMenuItem updateUserInfoToolStripMenuItem;
     }
 }

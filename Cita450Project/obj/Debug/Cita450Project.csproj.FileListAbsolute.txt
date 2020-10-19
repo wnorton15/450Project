@@ -33,3 +33,4 @@ G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.cspr
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.exe
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.pdb
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.MainMenu.resources
+G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.UpdateUser.resources

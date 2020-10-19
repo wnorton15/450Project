@@ -47,5 +47,11 @@ namespace Cita450Project
             login.Closed += (s, args) => this.Close();
             login.Show();
         }
+
+        private void updateUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateUser updateUser = new UpdateUser();
+            updateUser.Show();
+        }
     }
 }
