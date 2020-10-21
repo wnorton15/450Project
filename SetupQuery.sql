@@ -27,3 +27,12 @@ INSERT INTO BusinessTypes VALUES('GAS STATION');
 INSERT INTO BusinessTypes VALUES('GROCERY STORE');
 INSERT INTO BusinessTypes VALUES('CAMPGROUND');
 INSERT INTO BusinessTypes VALUES('OTHER');
+
+CREATE TABLE Deliveries (
+	DeliveryID int IDENTITY(1,1) PRIMARY KEY,
+	CustomerID int FOREIGN KEY references Customers(CustomerID),
+	NumberOfBags int NOT NULL,
+	CustomerPaid varchar(50)
+)
+
+ALTER TABLE Deliveries ADD DeliveryDate date;

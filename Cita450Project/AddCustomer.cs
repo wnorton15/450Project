@@ -16,6 +16,28 @@ namespace Cita450Project
         public AddCustomer()
         {
             InitializeComponent();
+            String query;
+            string connectionString;
+            SqlConnection cnn;
+
+            connectionString = @"Data Source=MAC18552;
+                                Initial Catalog=IceDB;
+                                integrated security=SSPI;
+                                    persist security info=False;
+                                    Trusted_Connection=Yes";
+
+            query = "Select * from BusinessTypes;";
+
+
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "BusinessTypes");
+            BusinessTypeCombo.DisplayMember = "BusinessType";
+            BusinessTypeCombo.ValueMember = "ID";
+            BusinessTypeCombo.DataSource = ds.Tables["BusinessTypes"];
+            cnn.Close();
         }
 
         private void SubmitCustomer_Click(object sender, EventArgs e)
@@ -87,15 +109,15 @@ namespace Cita450Project
 
             if (CustomerAddressExists)
             {
-                query = "INSERT INTO Customers (CustomerName, StreetNumber, StreetName, City, ZipCode, Price) " +
+                query = "INSERT INTO Customers (CustomerName, StreetNumber, StreetName, City, ZipCode, Price, BusinessType) " +
                                     "VALUES ('" + customerName +"', " + streetNumber.ToString() + ", '" +  
                                     streetName + "', '" + city + "', " + zipCode.ToString() +
-                                    ", " + customerPrice.ToString() + ")";
+                                    ", " + customerPrice.ToString() + ", " + BusinessTypeCombo.SelectedValue + ")";
             }
             else
             {
-                query = "INSERT INTO Customers (CustomerName, Price)" +
-                    "VALUES ('" + customerName + "', " + customerPrice.ToString() + ")";
+                query = "INSERT INTO Customers (CustomerName, Price, BusinessType)" +
+                    "VALUES ('" + customerName + "', " + customerPrice.ToString() + ", " + BusinessTypeCombo.SelectedValue + ")";
             }
             
             cnn = new SqlConnection(connectionString);
