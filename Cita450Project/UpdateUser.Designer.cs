@@ -46,6 +46,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonClear);
             this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Controls.Add(this.tbUsername);
             this.groupBox1.Controls.Add(this.tbEmail);
@@ -176,7 +178,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(6, 179);
+            this.buttonSave.Location = new System.Drawing.Point(6, 189);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 5;
@@ -214,6 +216,16 @@
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(87, 189);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 16;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // UpdateUser
             // 
@@ -256,5 +268,6 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

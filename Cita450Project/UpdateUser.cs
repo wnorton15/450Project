@@ -192,5 +192,10 @@ namespace Cita450Project
         {
             this.Close();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            clearfields();
+        }
     }
 }
