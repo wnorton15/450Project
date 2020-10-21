@@ -165,8 +165,8 @@ namespace Cita450Project
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
+            AddDelivery addDelivery = new AddDelivery();
+            addDelivery.Show();
         }
     }
 }
