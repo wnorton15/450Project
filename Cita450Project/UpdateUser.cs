@@ -126,22 +126,16 @@ namespace Cita450Project
                     //ask if an account matches 
 
                     //ask database if entered username and password exist
-                    string query2 = "UPDATE Users" +
-                        "SET LastName = @LastName, " +
-                        "FirstName = @FirstName, " +
-                        "Username = @Username, " +
-                        "UserPassword = @Password, " +
-                        "Email = @Email";
+                    string query2 = "UPDATE Users " +
+                        "SET LastName = '" + lastName + "', " +
+                        "FirstName = '" + firstName + "', " +
+                        "Username = '" + username + "', " +
+                        "UserPassword = '" + password + "', " +
+                        "Email = '" + email + "'";
+                    query2 = query2 + " Where Username = '" + searchUsername + "'";
 
                     cnn = new SqlConnection(connectionString);
                     SqlCommand cmd = new SqlCommand(query2, cnn);
-
-                    //replace the @Username & @Password with user inputs
-                    cmd.Parameters.Add("@Username", SqlDbType.VarChar, 255).Value = username;
-                    cmd.Parameters.Add("@Password", SqlDbType.VarChar, 255).Value = password;
-                    cmd.Parameters.Add("@Email", SqlDbType.VarChar, 255).Value = email;
-                    cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 255).Value = firstName;
-                    cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 255).Value = lastName;
 
                     //open connection
                     cmd.Connection.Open();
