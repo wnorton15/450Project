@@ -80,10 +80,10 @@ namespace Cita450Project
                 {
                     //Change "Data Source" field to system name
                     connectionString = @"Data Source=OWNER-PC;
-                Initial Catalog=IceDB;
-                integrated security=False;
-                persist security info=False;
-                Trusted_Connection=Yes";
+                        Initial Catalog=IceDB;
+                        integrated security=False;
+                        persist security info=False;
+                        Trusted_Connection=Yes";
                     cnn = new SqlConnection(connectionString);
 
                     //create query to enter into database

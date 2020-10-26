@@ -40,18 +40,29 @@ namespace Cita450Project
             login.Show();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var login = new Login();
-            login.Closed += (s, args) => this.Close();
-            login.Show();
-        }
 
         private void updateUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateUser updateUser = new UpdateUser();
             updateUser.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
     }
 }

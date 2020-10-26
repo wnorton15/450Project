@@ -101,7 +101,6 @@ namespace Cita450Project
 
                 if (myReader.Read() == true)
                 {
-                    MessageBox.Show("Login Successful, Welcome!");
                     //Take user to main menu
                     Clearfields();
                     this.Hide();

@@ -191,5 +191,31 @@ namespace Cita450Project
         {
             clearfields();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ckboxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            //grab text box property password char
+            char passwordChar = tbPassword.PasswordChar;
+            //convert "*" to char 
+            string str = "*";
+            char character = char.Parse(str);
+            //compare passwordChar to character
+            if (passwordChar == character)
+            {
+                //if yes, change to ""
+                tbPassword.PasswordChar = '\u0000';
+            }
+
+            else
+            {
+                //else remain "*"
+                tbPassword.PasswordChar = character;
+            }
+        }
     }
 }

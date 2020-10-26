@@ -38,10 +38,10 @@
             this.aboutApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ExitButton = new System.Windows.Forms.Button();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +50,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectOperationToolStripMenuItem,
             this.customerOperationsToolStripMenuItem,
-            this.aboutApplicationToolStripMenuItem});
+            this.aboutApplicationToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(420, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(508, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,8 +64,8 @@
             this.addUserToolStripMenuItem,
             this.updateUserInfoToolStripMenuItem});
             this.selectOperationToolStripMenuItem.Name = "selectOperationToolStripMenuItem";
-            this.selectOperationToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.selectOperationToolStripMenuItem.Text = "Admin Operations";
+            this.selectOperationToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.selectOperationToolStripMenuItem.Text = "Admin";
             // 
             // addUserToolStripMenuItem
             // 
@@ -76,8 +77,8 @@
             // updateUserInfoToolStripMenuItem
             // 
             this.updateUserInfoToolStripMenuItem.Name = "updateUserInfoToolStripMenuItem";
-            this.updateUserInfoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.updateUserInfoToolStripMenuItem.Text = "Update User Info";
+            this.updateUserInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateUserInfoToolStripMenuItem.Text = "Update User";
             this.updateUserInfoToolStripMenuItem.Click += new System.EventHandler(this.updateUserInfoToolStripMenuItem_Click);
             // 
             // customerOperationsToolStripMenuItem
@@ -86,8 +87,8 @@
             this.addCustomerToolStripMenuItem,
             this.custumerOrdersToolStripMenuItem});
             this.customerOperationsToolStripMenuItem.Name = "customerOperationsToolStripMenuItem";
-            this.customerOperationsToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
-            this.customerOperationsToolStripMenuItem.Text = "Customer Operations";
+            this.customerOperationsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.customerOperationsToolStripMenuItem.Text = "Customer";
             // 
             // addCustomerToolStripMenuItem
             // 
@@ -109,71 +110,63 @@
             this.helpInfoToolStripMenuItem,
             this.aboutAppToolStripMenuItem});
             this.aboutApplicationToolStripMenuItem.Name = "aboutApplicationToolStripMenuItem";
-            this.aboutApplicationToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.aboutApplicationToolStripMenuItem.Text = "Application Info";
+            this.aboutApplicationToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.aboutApplicationToolStripMenuItem.Text = "Help";
             // 
             // helpInfoToolStripMenuItem
             // 
             this.helpInfoToolStripMenuItem.Name = "helpInfoToolStripMenuItem";
-            this.helpInfoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.helpInfoToolStripMenuItem.Text = "Help Info";
+            this.helpInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpInfoToolStripMenuItem.Text = "View Help";
             // 
             // aboutAppToolStripMenuItem
             // 
             this.aboutAppToolStripMenuItem.Name = "aboutAppToolStripMenuItem";
-            this.aboutAppToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.aboutAppToolStripMenuItem.Text = "About App";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "WELCOME TO THE\r\n";
+            this.aboutAppToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutAppToolStripMenuItem.Text = "Contact Us";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(160, 121);
+            this.label2.Location = new System.Drawing.Point(160, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 34);
+            this.label2.Size = new System.Drawing.Size(169, 78);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ice CO.";
+            this.label2.Text = "Ice CO.\r\nDatabase";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // exitToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(138, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Application";
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem,
+            this.closeApplicationToolStripMenuItem});
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // ExitButton
+            // closeApplicationToolStripMenuItem
             // 
-            this.ExitButton.Location = new System.Drawing.Point(13, 245);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
-            this.ExitButton.TabIndex = 4;
-            this.ExitButton.Text = "Log Out";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.closeApplicationToolStripMenuItem.Name = "closeApplicationToolStripMenuItem";
+            this.closeApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeApplicationToolStripMenuItem.Text = "Close Application";
+            this.closeApplicationToolStripMenuItem.Click += new System.EventHandler(this.closeApplicationToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 294);
-            this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(508, 294);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
@@ -194,13 +187,13 @@
         private System.Windows.Forms.ToolStripMenuItem customerOperationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem custumerOrdersToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem aboutApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutAppToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.ToolStripMenuItem updateUserInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

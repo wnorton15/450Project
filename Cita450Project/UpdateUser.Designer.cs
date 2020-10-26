@@ -32,6 +32,7 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
+            this.ckboxShowPassword = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,13 +56,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter Username: ";
+            this.label1.Text = "Enter Username:";
             // 
             // tbUser
             // 
-            this.tbUser.Location = new System.Drawing.Point(120, 63);
+            this.tbUser.Location = new System.Drawing.Point(117, 63);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(119, 20);
             this.tbUser.TabIndex = 1;
@@ -77,7 +78,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ckboxShowPassword);
             this.groupBox1.Controls.Add(this.buttonClear);
+            this.groupBox1.Controls.Add(this.buttonExit);
             this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Controls.Add(this.tbUsername);
             this.groupBox1.Controls.Add(this.tbEmail);
@@ -91,15 +94,26 @@
             this.groupBox1.Controls.Add(this.buttonSave);
             this.groupBox1.Location = new System.Drawing.Point(14, 140);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 218);
+            this.groupBox1.Size = new System.Drawing.Size(310, 237);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Info";
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(106, 199);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 16;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(83, 140);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(193, 20);
             this.tbPassword.TabIndex = 15;
             // 
@@ -178,7 +192,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(6, 189);
+            this.buttonSave.Location = new System.Drawing.Point(25, 199);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 5;
@@ -188,7 +202,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(14, 383);
+            this.buttonExit.Location = new System.Drawing.Point(187, 199);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
             this.buttonExit.TabIndex = 6;
@@ -201,15 +215,16 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(88, 13);
+            this.label8.Location = new System.Drawing.Point(97, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 20);
+            this.label8.Size = new System.Drawing.Size(111, 20);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Update User Info";
+            this.label8.Text = "Update User";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(245, 61);
+            this.buttonSearch.Location = new System.Drawing.Point(242, 61);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
             this.buttonSearch.TabIndex = 8;
@@ -217,15 +232,16 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonClear
+            // ckboxShowPassword
             // 
-            this.buttonClear.Location = new System.Drawing.Point(87, 189);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonClear.TabIndex = 16;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.ckboxShowPassword.AutoSize = true;
+            this.ckboxShowPassword.Location = new System.Drawing.Point(123, 166);
+            this.ckboxShowPassword.Name = "ckboxShowPassword";
+            this.ckboxShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.ckboxShowPassword.TabIndex = 17;
+            this.ckboxShowPassword.Text = "Show Password";
+            this.ckboxShowPassword.UseVisualStyleBackColor = true;
+            this.ckboxShowPassword.CheckedChanged += new System.EventHandler(this.ckboxShowPassword_CheckedChanged);
             // 
             // UpdateUser
             // 
@@ -234,7 +250,6 @@
             this.ClientSize = new System.Drawing.Size(336, 416);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbUser);
@@ -269,5 +284,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.CheckBox ckboxShowPassword;
     }
 }
