@@ -46,12 +46,12 @@
             this.PasswordChk = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +138,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(45, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -244,55 +244,10 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Maroon;
             this.groupBox2.Location = new System.Drawing.Point(249, 58);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 185);
+            this.groupBox2.Size = new System.Drawing.Size(200, 160);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "User Requirements";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(176, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "- First and Last name are only letters";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 55);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "- Email ends with .com";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 85);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "- Password is between 4 and 15 ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "characters long";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(163, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "- Username is between 4 and 15 ";
             // 
             // label13
             // 
@@ -303,11 +258,56 @@
             this.label13.TabIndex = 5;
             this.label13.Text = "characters long";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "- Username is between 4 and 15 ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "characters long";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "- Password is between 4 and 15 ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "- Email ends with .com";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(176, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "- First and Last name are only letters";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 305);
+            this.ClientSize = new System.Drawing.Size(541, 305);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);

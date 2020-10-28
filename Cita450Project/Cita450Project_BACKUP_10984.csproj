@@ -58,6 +58,13 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="AddDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDelivery.Designer.cs">
+      <DependentUpon>AddDelivery.cs</DependentUpon>
+=======
     <Compile Include="UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +82,15 @@
     </Compile>
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
+>>>>>>> fbb680281d9126f3304e553f880c1981ec5a65e5
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDelivery.resx">
+      <DependentUpon>AddDelivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
