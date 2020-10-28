@@ -79,11 +79,11 @@ namespace Cita450Project
                 else if(email.EndsWith(".com") || email.EndsWith(".edu"))
                 {
                     //Change "Data Source" field to system name
-                    connectionString = @"Data Source=MAC18552;
-                Initial Catalog=IceDB;
-                integrated security=False;
-                persist security info=False;
-                Trusted_Connection=Yes";
+                    connectionString = @"Data Source=OWNER-PC;
+                        Initial Catalog=IceDB;
+                        integrated security=False;
+                        persist security info=False;
+                        Trusted_Connection=Yes";
                     cnn = new SqlConnection(connectionString);
 
                     //create query to enter into database
@@ -165,8 +165,7 @@ namespace Cita450Project
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            AddDelivery addDelivery = new AddDelivery();
-            addDelivery.Show();
+            this.Close();
         }
     }
 }
