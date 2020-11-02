@@ -31,7 +31,8 @@ namespace Cita450Project
 
         private void custumerOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AddDelivery addDelivery = new AddDelivery();
+            addDelivery.Show();
         }
 
         private void signInToolStripMenuItem_Click(object sender, EventArgs e)
