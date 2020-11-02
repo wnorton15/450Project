@@ -9,15 +9,7 @@ C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Pr
 C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.csproj.CoreCompileInputs.cache
 C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.exe
 C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.pdb
-G:\Classes\Cita450\450Project\Cita450Project\bin\Debug\Cita450Project.exe.config
-G:\Classes\Cita450\450Project\Cita450Project\bin\Debug\Cita450Project.exe
-G:\Classes\Cita450\450Project\Cita450Project\bin\Debug\Cita450Project.pdb
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.csprojAssemblyReference.cache
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.AddCustomer.resources
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.Form1.resources
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.Properties.Resources.resources
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.csproj.GenerateResource.cache
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.csproj.CoreCompileInputs.cache
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.exe
-G:\Classes\Cita450\450Project\Cita450Project\obj\Debug\Cita450Project.pdb
 C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.AddDelivery.resources
+C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.Login.resources
+C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.MainMenu.resources
+C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.UpdateUser.resources

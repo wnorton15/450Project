@@ -63,7 +63,7 @@ namespace Cita450Project
             }
 
             if (numberOfBags < 1)
-            {
+            { 
                 MessageBox.Show("Please enter a number for number of bags");
                 return;
             }

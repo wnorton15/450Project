@@ -3,25 +3,21 @@
 
 USE IceDB;
 
-CREATE TABLE Customers (
-	CustomerID int IDENTITY(1,1) PRIMARY KEY,
-	CustomerName varchar(255) NOT NULL,
-	CustomerAddress varchar(255),
-	Price float NOT NULL
-)
-
 CREATE TABLE BusinessTypes (
 	ID int IDENTITY(1,1) PRIMARY KEY,
 	BusinessType varchar(50) NOT NULL
 )
 
-ALTER TABLE Customers DROP COLUMN CustomerAddress;
-ALTER TABLE Customers ADD StreetNumber int;
-ALTER TABLE Customers ADD StreetName varchar(50);
-ALTER TABLE Customers ADD City varchar(50);
-ALTER TABLE Customers ADD ZipCode int;
-ALTER TABLE Customers ADD BusinessType int;
-ALTER TABLE Customers ADD FOREIGN KEY (BusinessType) REFERENCES BusinessTypes(ID);
+CREATE TABLE Customers (
+	CustomerID int IDENTITY(1,1) PRIMARY KEY,
+	CustomerName varchar(255) NOT NULL,
+	StreetNumber int,
+	StreetName varchar(50),
+	City varchar(50),
+	ZipCode int,
+	BusinessType int FOREIGN KEY REFERENCES BusinessTypes(ID),
+	Price float NOT NULL
+)
 
 INSERT INTO BusinessTypes VALUES('GAS STATION');
 INSERT INTO BusinessTypes VALUES('GROCERY STORE');
@@ -32,7 +28,6 @@ CREATE TABLE Deliveries (
 	DeliveryID int IDENTITY(1,1) PRIMARY KEY,
 	CustomerID int FOREIGN KEY references Customers(CustomerID),
 	NumberOfBags int NOT NULL,
-	CustomerPaid varchar(50)
+	CustomerPaid varchar(50),
+	DeliveryDate date
 )
-
-ALTER TABLE Deliveries ADD DeliveryDate date;
