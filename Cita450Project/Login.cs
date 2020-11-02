@@ -70,18 +70,18 @@ namespace Cita450Project
 
                 //create connection string to connect to database
                 //Change "Data Source" field to system name
-                connectionString = @"Data Source=OWNER-PC;
-                Initial Catalog=IceDB;
-                integrated security=False;
-                persist security info=False;
-                Trusted_Connection=Yes";
+                connectionString = @"Data Source=MAC18552;
+                                Initial Catalog=IceDB;
+                                integrated security=SSPI;
+                                    persist security info=False;
+                                    Trusted_Connection=Yes";
 
                 //create query to enter into database
                 //ask database if entered username and password exist
-                string query = "SELECT Username,UserPassword " +
+                string query = "SELECT Username,Password " +
                                 "From Users WHERE " +
                                 "Username = @Username AND " +
-                                "UserPassword = @Password";
+                                "Password = @Password";
 
                 cnn = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, cnn);
