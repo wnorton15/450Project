@@ -1,18 +1,15 @@
 
 USE IceDB;
-/*
+
 CREATE TABLE Users (
-    UserID int IDENTITY(1,1) PRIMARY KEY,
-    LastName varchar(255),
-    FirstName varchar(255),
-    Username varchar(255),
-    UserPassword varchar(255),
-	Email varchar(255)
+    Username varchar(50) PRIMARY KEY,
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    Email varchar(50) NOT NULL,
+    Password varchar(50) NOT NULL,
 );
 
-
-insert into Users (LastName, FirstName, Username, UserPassword, Email)
+insert into Users (LastName, FirstName, Username, Password, Email)
 values ('pankow', 'liam', 'pankow602', '1337', 'zzrhydonzz1@gmail.com');
-*/
 
 select * from Users where Username = 'pankow602'
