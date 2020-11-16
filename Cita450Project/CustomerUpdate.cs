@@ -16,6 +16,29 @@ namespace Cita450Project
         public Form2()
         {
             InitializeComponent();
+
+            String query;
+            string connectionString;
+            SqlConnection cnn;
+
+            connectionString = @"Data Source=OWNER-PC;
+                                Initial Catalog=IceDB;
+                                integrated security=SSPI;
+                                    persist security info=False;
+                                    Trusted_Connection=Yes";
+
+            query = "Select * from BusinessTypes;";
+
+
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "BusinessTypes");
+            BusinessTypeCombo.DisplayMember = "BusinessType";
+            BusinessTypeCombo.ValueMember = "ID";
+            BusinessTypeCombo.DataSource = ds.Tables["BusinessTypes"];
+            cnn.Close();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -54,13 +77,13 @@ namespace Cita450Project
                 {
                     //Read off and set the values of the customer record
                     myReader.Read();
-                    tbCustomerName.Text = myReader.GetValue(1).ToString();
-                    tbStreetNumber.Text = myReader.GetValue(2).ToString();
-                    tbStreetName.Text = myReader.GetValue(3).ToString();
-                    tbCity.Text = myReader.GetValue(4).ToString();
-                    tbZipCode.Text = myReader.GetValue(5).ToString();
-                    tbBusinessType.Text = myReader.GetValue(5).ToString();
-                    nudPrice.Value = decimal.Parse(myReader.GetValue(6).ToString());
+                    tbCustomerName.Text = myReader["CustomerName"].ToString();
+                    tbStreetNumber.Text = myReader["StreetNumber"].ToString();
+                    tbStreetName.Text = myReader["StreetName"].ToString();
+                    tbCity.Text = myReader["City"].ToString();
+                    tbZipCode.Text = myReader["ZipCode"].ToString();
+                    BusinessTypeCombo.SelectedValue = int.Parse(myReader["BusinessType"].ToString());
+                    tbCustomerPrice.Text = myReader["Price"].ToString();
                 }
                 else
                 {
@@ -87,12 +110,11 @@ namespace Cita450Project
         {
             string searchCustomerID = tbCustomer.Text.Trim();
             string customerName = tbCustomerName.Text.Trim();
-            string streetNumber = tbStreetNumber.Text.Trim();
+            int streetNumber = int.Parse(tbStreetNumber.Text.Trim());
+            int zipCode = int.Parse(tbZipCode.Text.Trim());
             string streetName = tbStreetName.Text.Trim();
             string city = tbCity.Text.Trim();
-            string zipCode = tbZipCode.Text.Trim();
-            string businessType = tbBusinessType.Text.Trim();
-            decimal price = nudPrice.Value;
+            float customerPrice;
 
             if (searchCustomerID == "")
             {
@@ -102,9 +124,9 @@ namespace Cita450Project
                         MessageBoxIcon.Warning);
             }
             //validate the fields
-            else if (customerName == "" || streetNumber == "" 
+            else if (customerName == "" || streetNumber == 0 
                 || streetName == "" || city == "" 
-                || zipCode == "" || businessType == "")
+                || zipCode == 0)
             {
                 MessageBox.Show("Save Error!!!",
                     "field was not entered!",
@@ -113,6 +135,16 @@ namespace Cita450Project
             }
             else
             {
+                try
+                {
+                    customerPrice = float.Parse(tbCustomerPrice.Text.Trim());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please enter a number for the price");
+                    return;
+                }
+
                 try
                 {
                     string connectionString;
@@ -137,11 +169,18 @@ namespace Cita450Project
                         "StreetName = '" + streetName + "', " +
                         "City = '" + city + "', " +
                         "ZipCode = '" + zipCode + "', " +
-                        "BusinessType = '" + businessType + "', " +
-                        "Price = '" + price + "'";
+                        "BusinessType = '" + BusinessTypeCombo.SelectedValue + "', " +
+                        "Price = '" + customerPrice + "'";
 
                     //add where statement to 
-                    query2 = query2 + " Where Username = '" + searchCustomerID + "'";
+                    query2 = query2 + " Where CustomerID = '" + searchCustomerID + "'";
+
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want " +
+                        "to make these changes?", "Execute changes", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
 
                     cnn = new SqlConnection(connectionString);
                     SqlCommand cmd = new SqlCommand(query2, cnn);
@@ -149,21 +188,13 @@ namespace Cita450Project
                     //open connection
                     cmd.Connection.Open();
 
-                    SqlDataReader myReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    //execute query
+                    int numberEffectRow = cmd.ExecuteNonQuery();
 
-                    if (myReader.HasRows)
+                    //check if a record has been affected
+                    if (numberEffectRow == 1)
                     {
-                        MessageBox.Show("Saved",
-                            "Your changes were " +
-                            "successfully changed!");
-                        clearfields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Search Error!!!",
-                            "Username does not Exist",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                        MessageBox.Show("The customer information is updated!");
                     }
 
                     if (cnn.State == ConnectionState.Open)
@@ -196,9 +227,8 @@ namespace Cita450Project
             tbStreetNumber.Clear();
             tbStreetName.Clear();
             tbCity.Clear();
-            tbBusinessType.Clear();
-            decimal Price = 0; 
-            nudPrice.Value = Price;
+            tbZipCode.Clear();
+            tbCustomerPrice.Clear();
         }
     }
 }

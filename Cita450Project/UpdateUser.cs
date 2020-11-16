@@ -55,11 +55,11 @@ namespace Cita450Project
                 if (myReader.HasRows)
                 {
                     myReader.Read();
-                    tbLastName.Text = myReader.GetValue(0).ToString();
-                    tbFirstName.Text = myReader.GetValue(1).ToString();
-                    tbUsername.Text = myReader.GetValue(2).ToString();
-                    tbPassword.Text = myReader.GetValue(3).ToString();
-                    tbEmail.Text = myReader.GetValue(4).ToString();
+                    tbLastName.Text = myReader["LastName"].ToString();
+                    tbFirstName.Text = myReader["FirstName"].ToString();
+                    tbUsername.Text = myReader["Username"].ToString();
+                    tbPassword.Text = myReader["Password"].ToString();
+                    tbEmail.Text = myReader["Email"].ToString();
                 }
                 else
                 {
@@ -130,9 +130,16 @@ namespace Cita450Project
                         "SET LastName = '" + lastName + "', " +
                         "FirstName = '" + firstName + "', " +
                         "Username = '" + username + "', " +
-                        "UserPassword = '" + password + "', " +
+                        "Password = '" + password + "', " +
                         "Email = '" + email + "'";
                     query2 = query2 + " Where Username = '" + searchUsername + "'";
+
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want " +
+                    "to make these changes?", "Execute changes", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
 
                     cnn = new SqlConnection(connectionString);
                     SqlCommand cmd = new SqlCommand(query2, cnn);
@@ -140,21 +147,13 @@ namespace Cita450Project
                     //open connection
                     cmd.Connection.Open();
 
-                    SqlDataReader myReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    //execute query
+                    int numberEffectRow= cmd.ExecuteNonQuery();
 
-                    if (myReader.HasRows)
+                    //check if a record has been affected
+                    if(numberEffectRow == 1)
                     {
-                        MessageBox.Show("Saved",
-                            "Your changes were " +
-                            "successfully changed!");
-                        clearfields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Search Error!!!",
-                            "Username does not Exist",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                        MessageBox.Show("The account is updated!");
                     }
 
                     if (cnn.State == ConnectionState.Open)

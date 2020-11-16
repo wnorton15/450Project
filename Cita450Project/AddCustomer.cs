@@ -20,7 +20,7 @@ namespace Cita450Project
             string connectionString;
             SqlConnection cnn;
 
-            connectionString = @"Data Source=MAC18552;
+            connectionString = @"Data Source=OWNER-PC;
                                 Initial Catalog=IceDB;
                                 integrated security=SSPI;
                                     persist security info=False;
@@ -101,7 +101,7 @@ namespace Cita450Project
                 return;
             }
             
-            connectionString = @"Data Source=MAC18552;
+            connectionString = @"Data Source=OWNER-PC;
                                 Initial Catalog=IceDB;
                                 integrated security=SSPI;
                                     persist security info=False;

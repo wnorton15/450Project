@@ -53,17 +53,23 @@ namespace Cita450Project
 
         }
 
-        private void closeApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void updateCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var login = new Login();
-            login.Closed += (s, args) => this.Close();
-            login.Show();
+            Form2 updateCustomer = new Form2();
+            updateCustomer.Show();
         }
     }
 }

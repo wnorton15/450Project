@@ -31,8 +31,8 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.nudPrice = new System.Windows.Forms.NumericUpDown();
+            this.tbZipCode = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -49,20 +49,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCustomer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbZipCode = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbBusinessType = new System.Windows.Forms.TextBox();
+            this.tbCustomerPrice = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BusinessTypeCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSearch
             // 
             this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearch.Location = new System.Drawing.Point(308, 83);
+            this.buttonSearch.Location = new System.Drawing.Point(295, 83);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 14;
+            this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -73,7 +72,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(159, 29);
+            this.label8.Location = new System.Drawing.Point(146, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 20);
             this.label8.TabIndex = 13;
@@ -82,14 +81,14 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.BusinessTypeCombo);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.tbCustomerPrice);
             this.groupBox1.Controls.Add(this.tbZipCode);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.nudPrice);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.buttonClear);
             this.groupBox1.Controls.Add(this.buttonExit);
-            this.groupBox1.Controls.Add(this.tbBusinessType);
             this.groupBox1.Controls.Add(this.tbCity);
             this.groupBox1.Controls.Add(this.tbStreetName);
             this.groupBox1.Controls.Add(this.tbStreetNumber);
@@ -100,28 +99,28 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Location = new System.Drawing.Point(59, 162);
+            this.groupBox1.Location = new System.Drawing.Point(56, 158);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 294);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Info";
             // 
-            // label10
+            // tbZipCode
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(149, 207);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "$";
+            this.tbZipCode.Location = new System.Drawing.Point(114, 136);
+            this.tbZipCode.Name = "tbZipCode";
+            this.tbZipCode.Size = new System.Drawing.Size(193, 20);
+            this.tbZipCode.TabIndex = 7;
             // 
-            // nudPrice
+            // label11
             // 
-            this.nudPrice.Location = new System.Drawing.Point(168, 205);
-            this.nudPrice.Name = "nudPrice";
-            this.nudPrice.Size = new System.Drawing.Size(75, 20);
-            this.nudPrice.TabIndex = 19;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(49, 139);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Zip Code : ";
             // 
             // label9
             // 
@@ -137,7 +136,7 @@
             this.buttonClear.Location = new System.Drawing.Point(124, 245);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonClear.TabIndex = 16;
+            this.buttonClear.TabIndex = 12;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
@@ -147,7 +146,7 @@
             this.buttonExit.Location = new System.Drawing.Point(205, 245);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 6;
+            this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -157,28 +156,28 @@
             this.tbCity.Location = new System.Drawing.Point(114, 110);
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(193, 20);
-            this.tbCity.TabIndex = 14;
+            this.tbCity.TabIndex = 6;
             // 
             // tbStreetName
             // 
             this.tbStreetName.Location = new System.Drawing.Point(114, 84);
             this.tbStreetName.Name = "tbStreetName";
             this.tbStreetName.Size = new System.Drawing.Size(193, 20);
-            this.tbStreetName.TabIndex = 13;
+            this.tbStreetName.TabIndex = 5;
             // 
             // tbStreetNumber
             // 
             this.tbStreetNumber.Location = new System.Drawing.Point(114, 58);
             this.tbStreetNumber.Name = "tbStreetNumber";
             this.tbStreetNumber.Size = new System.Drawing.Size(193, 20);
-            this.tbStreetNumber.TabIndex = 12;
+            this.tbStreetNumber.TabIndex = 4;
             // 
             // tbCustomerName
             // 
             this.tbCustomerName.Location = new System.Drawing.Point(114, 32);
             this.tbCustomerName.Name = "tbCustomerName";
             this.tbCustomerName.Size = new System.Drawing.Size(193, 20);
-            this.tbCustomerName.TabIndex = 11;
+            this.tbCustomerName.TabIndex = 3;
             // 
             // label7
             // 
@@ -230,7 +229,7 @@
             this.buttonSave.Location = new System.Drawing.Point(43, 245);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 5;
+            this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -239,7 +238,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 129);
+            this.label2.Location = new System.Drawing.Point(126, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 13);
             this.label2.TabIndex = 11;
@@ -248,44 +247,45 @@
             // tbCustomer
             // 
             this.tbCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCustomer.Location = new System.Drawing.Point(183, 85);
+            this.tbCustomer.Location = new System.Drawing.Point(170, 85);
             this.tbCustomer.Name = "tbCustomer";
             this.tbCustomer.Size = new System.Drawing.Size(119, 20);
-            this.tbCustomer.TabIndex = 10;
+            this.tbCustomer.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 88);
+            this.label1.Location = new System.Drawing.Point(68, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Enter Customer ID:";
             // 
-            // tbZipCode
+            // tbCustomerPrice
             // 
-            this.tbZipCode.Location = new System.Drawing.Point(114, 136);
-            this.tbZipCode.Name = "tbZipCode";
-            this.tbZipCode.Size = new System.Drawing.Size(193, 20);
-            this.tbZipCode.TabIndex = 22;
+            this.tbCustomerPrice.Location = new System.Drawing.Point(155, 204);
+            this.tbCustomerPrice.Name = "tbCustomerPrice";
+            this.tbCustomerPrice.Size = new System.Drawing.Size(109, 20);
+            this.tbCustomerPrice.TabIndex = 9;
             // 
-            // label11
+            // label10
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(49, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Zip Code : ";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(136, 207);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "$";
             // 
-            // tbBusinessType
+            // BusinessTypeCombo
             // 
-            this.tbBusinessType.Location = new System.Drawing.Point(114, 176);
-            this.tbBusinessType.Name = "tbBusinessType";
-            this.tbBusinessType.PasswordChar = '*';
-            this.tbBusinessType.Size = new System.Drawing.Size(193, 20);
-            this.tbBusinessType.TabIndex = 15;
+            this.BusinessTypeCombo.FormattingEnabled = true;
+            this.BusinessTypeCombo.Location = new System.Drawing.Point(114, 176);
+            this.BusinessTypeCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.BusinessTypeCombo.Name = "BusinessTypeCombo";
+            this.BusinessTypeCombo.Size = new System.Drawing.Size(193, 21);
+            this.BusinessTypeCombo.TabIndex = 25;
             // 
             // Form2
             // 
@@ -299,10 +299,10 @@
             this.Controls.Add(this.tbCustomer);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Update Customer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,11 +328,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCustomer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown nudPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbZipCode;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbBusinessType;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbCustomerPrice;
+        private System.Windows.Forms.ComboBox BusinessTypeCombo;
     }
 }
