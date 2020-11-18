@@ -38,10 +38,9 @@
             this.aboutApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,14 +69,14 @@
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // updateUserInfoToolStripMenuItem
             // 
             this.updateUserInfoToolStripMenuItem.Name = "updateUserInfoToolStripMenuItem";
-            this.updateUserInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateUserInfoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.updateUserInfoToolStripMenuItem.Text = "Update User";
             this.updateUserInfoToolStripMenuItem.Click += new System.EventHandler(this.updateUserInfoToolStripMenuItem_Click);
             // 
@@ -85,6 +84,7 @@
             // 
             this.customerOperationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCustomerToolStripMenuItem,
+            this.updateCustomerToolStripMenuItem,
             this.custumerOrdersToolStripMenuItem});
             this.customerOperationsToolStripMenuItem.Name = "customerOperationsToolStripMenuItem";
             this.customerOperationsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -116,50 +116,42 @@
             // helpInfoToolStripMenuItem
             // 
             this.helpInfoToolStripMenuItem.Name = "helpInfoToolStripMenuItem";
-            this.helpInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpInfoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.helpInfoToolStripMenuItem.Text = "View Help";
             // 
             // aboutAppToolStripMenuItem
             // 
             this.aboutAppToolStripMenuItem.Name = "aboutAppToolStripMenuItem";
-            this.aboutAppToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutAppToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.aboutAppToolStripMenuItem.Text = "Contact Us";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(160, 109);
+            this.label2.Location = new System.Drawing.Point(154, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 78);
+            this.label2.Size = new System.Drawing.Size(193, 90);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ice CO.\r\nDatabase";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // exitToolStripMenuItem
+            // updateCustomerToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logOutToolStripMenuItem,
-            this.closeApplicationToolStripMenuItem});
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // closeApplicationToolStripMenuItem
-            // 
-            this.closeApplicationToolStripMenuItem.Name = "closeApplicationToolStripMenuItem";
-            this.closeApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closeApplicationToolStripMenuItem.Text = "Close Application";
-            this.closeApplicationToolStripMenuItem.Click += new System.EventHandler(this.closeApplicationToolStripMenuItem_Click);
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            this.updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
+            this.updateCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateCustomerToolStripMenuItem.Text = "Update Customer";
+            this.updateCustomerToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -193,7 +185,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutAppToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateUserInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCustomerToolStripMenuItem;
     }
 }

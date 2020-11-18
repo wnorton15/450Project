@@ -1,6 +1,6 @@
 ﻿namespace Cita450Project
 {
-    partial class UpdateUser
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbUser = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ckboxShowPassword = new System.Windows.Forms.CheckBox();
             this.buttonClear = new System.Windows.Forms.Button();
@@ -46,38 +45,33 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.buttonSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbCustomer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // buttonSearch
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter Username:";
+            this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSearch.Location = new System.Drawing.Point(270, 79);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 14;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
             // 
-            // tbUser
+            // label8
             // 
-            this.tbUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbUser.Location = new System.Drawing.Point(117, 63);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(119, 20);
-            this.tbUser.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Please update the following credentials.";
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(121, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 20);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Update Customer";
             // 
             // groupBox1
             // 
@@ -96,10 +90,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Location = new System.Drawing.Point(14, 140);
+            this.groupBox1.Location = new System.Drawing.Point(42, 158);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(310, 237);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Info";
             // 
@@ -112,7 +106,6 @@
             this.ckboxShowPassword.TabIndex = 17;
             this.ckboxShowPassword.Text = "Show Password";
             this.ckboxShowPassword.UseVisualStyleBackColor = true;
-            this.ckboxShowPassword.CheckedChanged += new System.EventHandler(this.ckboxShowPassword_CheckedChanged);
             // 
             // buttonClear
             // 
@@ -122,7 +115,6 @@
             this.buttonClear.TabIndex = 16;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonExit
             // 
@@ -132,7 +124,6 @@
             this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // tbPassword
             // 
@@ -223,44 +214,47 @@
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // label8
+            // label2
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(97, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Update User";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(101, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Please update the following credentials.";
             // 
-            // buttonSearch
+            // tbCustomer
             // 
-            this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearch.Location = new System.Drawing.Point(242, 61);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 8;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.tbCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbCustomer.Location = new System.Drawing.Point(145, 81);
+            this.tbCustomer.Name = "tbCustomer";
+            this.tbCustomer.Size = new System.Drawing.Size(119, 20);
+            this.tbCustomer.TabIndex = 10;
             // 
-            // UpdateUser
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Enter Username:";
+            // 
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 416);
+            this.ClientSize = new System.Drawing.Size(398, 450);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbUser);
+            this.Controls.Add(this.tbCustomer);
             this.Controls.Add(this.label1);
-            this.Name = "UpdateUser";
+            this.Name = "Form2";
             this.Text = "Form2";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -271,10 +265,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox ckboxShowPassword;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbEmail;
@@ -286,10 +282,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.CheckBox ckboxShowPassword;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbCustomer;
+        private System.Windows.Forms.Label label1;
     }
 }

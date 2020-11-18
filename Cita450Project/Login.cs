@@ -70,7 +70,7 @@ namespace Cita450Project
 
                 //create connection string to connect to database
                 //Change "Data Source" field to system name
-                connectionString = @"Data Source=MAC18552;
+                connectionString = @"Data Source=OWNER-PC;
                                 Initial Catalog=IceDB;
                                 integrated security=SSPI;
                                     persist security info=False;
@@ -150,7 +150,15 @@ namespace Cita450Project
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }

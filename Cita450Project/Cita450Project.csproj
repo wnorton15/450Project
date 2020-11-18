@@ -52,7 +52,7 @@
     <Compile Include="AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
-	<Compile Include="AddDelivery.cs">
+    <Compile Include="AddDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddDelivery.Designer.cs">
@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpdate.Designer.cs">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateUser.cs">
       <SubType>Form</SubType>
@@ -90,8 +96,11 @@
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="AddDelivery.resx">
+    <EmbeddedResource Include="AddDelivery.resx">
       <DependentUpon>AddDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUpdate.resx">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
