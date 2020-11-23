@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace Cita450Project
 {
-    public partial class Form3 : Form
+    public partial class CustomerReport : Form
     {
-        public Form3()
+        public CustomerReport()
         {
             InitializeComponent();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void clearfields()
+        {
+            //set all fields to ""
+            tbName.Clear();
+            tbCity.Clear();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            Messagebox()
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

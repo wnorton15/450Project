@@ -34,13 +34,13 @@
             this.updateUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerOperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.custumerOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,14 +93,21 @@
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
+            // 
+            // updateCustomerToolStripMenuItem
+            // 
+            this.updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
+            this.updateCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateCustomerToolStripMenuItem.Text = "Update Customer";
+            this.updateCustomerToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerToolStripMenuItem_Click);
             // 
             // custumerOrdersToolStripMenuItem
             // 
             this.custumerOrdersToolStripMenuItem.Name = "custumerOrdersToolStripMenuItem";
-            this.custumerOrdersToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.custumerOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.custumerOrdersToolStripMenuItem.Text = "Custumer Orders";
             this.custumerOrdersToolStripMenuItem.Click += new System.EventHandler(this.custumerOrdersToolStripMenuItem_Click);
             // 
@@ -145,13 +152,6 @@
             this.label2.Text = "Ice CO.\r\nDatabase";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // updateCustomerToolStripMenuItem
-            // 
-            this.updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
-            this.updateCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateCustomerToolStripMenuItem.Text = "Update Customer";
-            this.updateCustomerToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
