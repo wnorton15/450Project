@@ -70,6 +70,7 @@
     <Compile Include="CustomerUpdate.Designer.cs">
       <DependentUpon>CustomerUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
