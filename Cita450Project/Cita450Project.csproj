@@ -52,7 +52,7 @@
     <Compile Include="AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
-	<Compile Include="AddDelivery.cs">
+    <Compile Include="AddDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddDelivery.Designer.cs">
@@ -64,6 +64,7 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +91,7 @@
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="AddDelivery.resx">
+    <EmbeddedResource Include="AddDelivery.resx">
       <DependentUpon>AddDelivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
