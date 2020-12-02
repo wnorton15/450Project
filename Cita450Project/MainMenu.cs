@@ -31,8 +31,8 @@ namespace Cita450Project
 
         private void custumerOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddDelivery addDelivery = new AddDelivery();
-            addDelivery.Show();
+            AddOrder addOrder = new AddOrder();
+            addOrder.Show();
         }
 
         private void signInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +70,17 @@ namespace Cita450Project
         {
             Form2 updateCustomer = new Form2();
             updateCustomer.Show();
+        }
+
+        private void customerOperationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addDeliveryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDelivery addDelivery = new AddDelivery();
+            addDelivery.Show();
         }
     }
 }

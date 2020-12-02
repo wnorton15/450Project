@@ -29,3 +29,5 @@ G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.cspr
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.csproj.CoreCompileInputs.cache
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.exe
 G:\Classes\Cita450\450ProjectBranch\Cita450Project\obj\Debug\Cita450Project.pdb
+C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.AddOrder.resources
+C:\Users\norton402\Documents\Cita 450\Project\Cita450Project\obj\Debug\Cita450Project.Form2.resources

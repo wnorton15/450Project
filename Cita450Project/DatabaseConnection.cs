@@ -36,6 +36,20 @@ namespace Cita450Project
             return myReader;
         }
 
+        public SqlDataAdapter SelectAdapterFromDB(String query)
+        {
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(query, cnn);
+
+            cmd.Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+
+            cmd.Connection.Close();
+
+            return adapter;
+        }
+
         public void RunQueryonDB(String query)
         {
             

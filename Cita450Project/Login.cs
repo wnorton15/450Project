@@ -70,7 +70,7 @@ namespace Cita450Project
 
                 //create connection string to connect to database
                 //Change "Data Source" field to system name
-                connectionString = @"Data Source=OWNER-PC;
+                connectionString = @"Data Source=MAC18552;
                                 Initial Catalog=IceDB;
                                 integrated security=SSPI;
                                     persist security info=False;

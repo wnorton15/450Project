@@ -31,3 +31,9 @@ CREATE TABLE Deliveries (
 	CustomerPaid varchar(50),
 	DeliveryDate date
 )
+
+CREATE TABLE Orders (
+	OrderID int IDENTITY(1,1) PRIMARY KEY,
+	CustomerID int FOREIGN KEY references Customers(CustomerID),
+	OrderDate date
+)
