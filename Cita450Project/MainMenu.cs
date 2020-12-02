@@ -71,5 +71,11 @@ namespace Cita450Project
             Form2 updateCustomer = new Form2();
             updateCustomer.Show();
         }
+
+        private void customerListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerReport customerReport = new CustomerReport();
+            customerReport.Show();
+        }
     }
 }

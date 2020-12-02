@@ -62,7 +62,7 @@ namespace Cita450Project
 
                 //create query to enter into database
                 //ask database if entered username and password exist
-                string query = "select * from Customers where CustomerID = " + searchCustomerID;
+                string query = "select * from Customers where CustomerID = " + searchCustomerID + "';";
 
                 cnn = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(query, cnn);
@@ -170,7 +170,7 @@ namespace Cita450Project
                         "City = '" + city + "', " +
                         "ZipCode = '" + zipCode + "', " +
                         "BusinessType = '" + BusinessTypeCombo.SelectedValue + "', " +
-                        "Price = '" + customerPrice + "'";
+                        "Price = '" + customerPrice + "';";
 
                     //add where statement to 
                     query2 = query2 + " Where CustomerID = '" + searchCustomerID + "'";
