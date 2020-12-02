@@ -19,27 +19,17 @@ namespace Cita450Project
             InitializeComponent();
 
             String query;
-            string connectionString;
-            SqlConnection cnn;
-
-            connectionString = @"Data Source=OWNER-PC;
-                                Initial Catalog=IceDB;
-                                integrated security=SSPI;
-                                    persist security info=False;
-                                    Trusted_Connection=Yes";
+            DatabaseConnection databaseConnection = new DatabaseConnection();
 
             query = "Select * from BusinessTypes;";
 
-
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+            
+            SqlDataAdapter adapter = databaseConnection.SelectAdapterFromDB(query);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "BusinessTypes");
             BusinessTypeCombo.DisplayMember = "BusinessType";
             BusinessTypeCombo.ValueMember = "ID";
             BusinessTypeCombo.DataSource = ds.Tables["BusinessTypes"];
-            cnn.Close();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

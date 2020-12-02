@@ -14,13 +14,19 @@ namespace Cita450Project
     class DatabaseConnection
     {
         //this is my data source name 
-        private static String connectionString = @"Data Source=MAC18552;
+        /*private static String connectionString = @"Data Source=MAC18552;
                                 Initial Catalog=IceDB;
                                 integrated security=SSPI;
                                     persist security info=False;
                                     Trusted_Connection=Yes";
+        */
         //This is Liam's data source name 
-        //private static String connectionString = "";
+        private static String connectionString = 
+            @"Data Source=OWNER-PC;
+                                Initial Catalog=IceDB;
+                                integrated security=SSPI;
+                                    persist security info=False;
+                                    Trusted_Connection=Yes";
 
         public SqlDataReader SelectFromDB(String query)
         {
@@ -34,6 +40,20 @@ namespace Cita450Project
             cmd.Connection.Close();
 
             return myReader;
+        }
+
+        public SqlDataAdapter SelectAdapterFromDB(String query)
+        {
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(query, cnn);
+
+            cmd.Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+
+            cmd.Connection.Close();
+
+            return adapter;
         }
 
         public void RunQueryonDB(String query)
