@@ -58,19 +58,6 @@ namespace Cita450Project
             clearfields();
         }
 
-        private void CustomerReport_Load(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Customers",
-                @"Data Source=OWNER-PC;
-                Initial Catalog=IceDB;
-                integrated security=False;
-                persist security info=False;
-                Trusted_Connection=Yes");
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Customers");
-            dgvCustomers.DataSource = ds.Tables["Customers"].DefaultView;
-        }
-
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             try
@@ -88,16 +75,30 @@ namespace Cita450Project
                 Trusted_Connection=Yes";
 
                 //create query to enter into database
-                string query = "select * from Customers WHERE ";
+                string query = "select c.CustomerID, c.CustomerName, " +
+                    "c.StreetNumber, StreetName, c.City, c.ZipCode, " +
+                    "b.BusinessType, c.Price" +
+                    " from Customers as c join BusinessTypes as b on " +
+                    "c.BusinessType = b.ID WHERE ";
 
                 //recieve the input from the user
                 string name = tbName.Text.Trim();
                 string city = tbCity.Text.Trim();
 
                 //add where fields to query
-                query = query + "CustomerName LIKE '" + name + "%' and " +
-                    "City LIKE '" + city + "%' and BusinessType = " +
-                    BusinessTypeCombo.SelectedIndex;
+                if (BusinessTypeCombo.SelectedIndex == 0)
+                {
+                    //display all of the business types
+                    query = query + "c.CustomerName LIKE '" + name + "%' and " +
+                        "c.City LIKE '" + city + "%' and c.BusinessType >= 0";
+                }
+                else
+                {
+                    //display only the searched business type
+                    query = query + "c.CustomerName LIKE '" + name + "%' and " +
+                        "c.City LIKE '" + city + "%' and c.BusinessType = " +
+                        BusinessTypeCombo.SelectedIndex;
+                }
 
                 cnn = new SqlConnection(connectionString);
 
@@ -113,6 +114,11 @@ namespace Cita450Project
                 }
             }
         
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

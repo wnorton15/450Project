@@ -34,12 +34,12 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BusinessTypeCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BusinessTypeCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +60,14 @@
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label8.Location = new System.Drawing.Point(327, 24);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 20);
+            this.label8.Size = new System.Drawing.Size(132, 20);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Update Customer";
+            this.label8.Text = "Search Results";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(86, 132);
+            this.buttonClear.Location = new System.Drawing.Point(86, 127);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 16;
@@ -76,7 +77,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(167, 132);
+            this.buttonExit.Location = new System.Drawing.Point(167, 127);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
             this.buttonExit.TabIndex = 17;
@@ -86,7 +87,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(5, 132);
+            this.buttonSearch.Location = new System.Drawing.Point(5, 127);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
             this.buttonSearch.TabIndex = 15;
@@ -107,19 +108,10 @@
             this.groupBox1.Controls.Add(this.buttonExit);
             this.groupBox1.Location = new System.Drawing.Point(12, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 166);
+            this.groupBox1.Size = new System.Drawing.Size(248, 171);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
-            // 
-            // BusinessTypeCombo
-            // 
-            this.BusinessTypeCombo.FormattingEnabled = true;
-            this.BusinessTypeCombo.Location = new System.Drawing.Point(100, 84);
-            this.BusinessTypeCombo.Margin = new System.Windows.Forms.Padding(2);
-            this.BusinessTypeCombo.Name = "BusinessTypeCombo";
-            this.BusinessTypeCombo.Size = new System.Drawing.Size(128, 21);
-            this.BusinessTypeCombo.TabIndex = 24;
             // 
             // label1
             // 
@@ -165,7 +157,16 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Customer Name";
+            this.label2.Text = "Company Name";
+            // 
+            // BusinessTypeCombo
+            // 
+            this.BusinessTypeCombo.FormattingEnabled = true;
+            this.BusinessTypeCombo.Location = new System.Drawing.Point(100, 84);
+            this.BusinessTypeCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.BusinessTypeCombo.Name = "BusinessTypeCombo";
+            this.BusinessTypeCombo.Size = new System.Drawing.Size(128, 21);
+            this.BusinessTypeCombo.TabIndex = 24;
             // 
             // CustomerReport
             // 
@@ -197,7 +198,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCity;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox BusinessTypeCombo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox BusinessTypeCombo;
     }
 }

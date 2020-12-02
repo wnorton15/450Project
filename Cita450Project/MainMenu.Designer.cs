@@ -36,12 +36,12 @@
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.custumerOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.customerListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,13 @@
             this.custumerOrdersToolStripMenuItem.Text = "Custumer Orders";
             this.custumerOrdersToolStripMenuItem.Click += new System.EventHandler(this.custumerOrdersToolStripMenuItem_Click);
             // 
+            // customerListToolStripMenuItem
+            // 
+            this.customerListToolStripMenuItem.Name = "customerListToolStripMenuItem";
+            this.customerListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerListToolStripMenuItem.Text = "Search Report";
+            this.customerListToolStripMenuItem.Click += new System.EventHandler(this.customerListToolStripMenuItem_Click);
+            // 
             // aboutApplicationToolStripMenuItem
             // 
             this.aboutApplicationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -154,13 +161,6 @@
             this.label2.Text = "Ice CO.\r\nDatabase";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // customerListToolStripMenuItem
-            // 
-            this.customerListToolStripMenuItem.Name = "customerListToolStripMenuItem";
-            this.customerListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.customerListToolStripMenuItem.Text = "Customer List";
-            this.customerListToolStripMenuItem.Click += new System.EventHandler(this.customerListToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
